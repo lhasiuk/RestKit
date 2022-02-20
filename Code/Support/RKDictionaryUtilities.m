@@ -34,10 +34,10 @@ NSDictionary *RKDictionaryByReplacingPercentEscapesInEntriesFromDictionary(NSDic
     NSMutableDictionary *results = [NSMutableDictionary dictionaryWithCapacity:[dictionary count]];
     [dictionary enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop)
      {
-         NSString *escapedKey = [key stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-         id escapedValue = value;
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+         NSString *escapedKey = [key stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+         id escapedValue = value;
          if ([value respondsToSelector:@selector(stringByReplacingPercentEscapesUsingEncoding:)])
              escapedValue = [value stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 #pragma clang diagnostic pop
