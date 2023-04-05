@@ -22,7 +22,7 @@
 
 #import "AFRKImageRequestOperation.h"
 
-static dispatch_queue_t image_request_operation_processing_queue() {
+static dispatch_queue_t image_request_operation_processing_queue(void) {
     static dispatch_queue_t afrk_image_request_operation_processing_queue;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

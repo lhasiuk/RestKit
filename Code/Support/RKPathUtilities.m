@@ -93,7 +93,7 @@ BOOL RKEnsureDirectoryExistsAtPath(NSString *path, NSError **error)
     return YES;
 }
 
-static NSDictionary *RKDictionaryOfFileExtensionsToMIMETypes()
+static NSDictionary *RKDictionaryOfFileExtensionsToMIMETypes(void)
 {
     return @{ @"json": @"application/json" };
 }

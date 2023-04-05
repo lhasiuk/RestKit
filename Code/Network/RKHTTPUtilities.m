@@ -82,7 +82,7 @@ RKRequestMethod RKRequestMethodFromString(NSString *methodName)
 }
 
 // Built from http://en.wikipedia.org/wiki/List_of_HTTP_status_codes
-static NSDictionary *RKStatusCodesToNamesDictionary()
+static NSDictionary *RKStatusCodesToNamesDictionary(void)
 {
     static NSDictionary *statusCodesToNamesDictionary = nil;
     static dispatch_once_t onceToken;
@@ -577,7 +577,7 @@ NSString *RKPathAndQueryStringFromURLRelativeToURL(NSURL *URL, NSURL *baseURL)
     }
 }
 
-NSIndexSet *RKStatusCodesOfResponsesWithOptionalBodies()
+NSIndexSet *RKStatusCodesOfResponsesWithOptionalBodies(void)
 {
     NSMutableIndexSet *statusCodes = [NSMutableIndexSet indexSet];
     [statusCodes addIndex:201];

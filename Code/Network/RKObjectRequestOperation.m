@@ -190,14 +190,14 @@ NSString *const RKResponseHasBeenMappedCacheUserInfoKey = @"RKResponseHasBeenMap
 NSString *const RKObjectRequestOperationMappingDidStartUserInfoKey = @"mappingStartedAt";
 NSString *const RKObjectRequestOperationMappingDidFinishUserInfoKey = @"mappingFinishedAt";
 
-static void RKIncrementNetworkActivityIndicator()
+static void RKIncrementNetworkActivityIndicator(void)
 {
     #if __IPHONE_OS_VERSION_MIN_REQUIRED
         [[AFRKNetworkActivityIndicatorManager sharedManager] incrementActivityCount];
     #endif
 }
 
-static void RKDecrementNetworkAcitivityIndicator()
+static void RKDecrementNetworkAcitivityIndicator(void)
 {
     #if __IPHONE_OS_VERSION_MIN_REQUIRED
         [[AFRKNetworkActivityIndicatorManager sharedManager] decrementActivityCount];

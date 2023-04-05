@@ -91,7 +91,7 @@ static NSArray *RKEntityIdentificationAttributeNamesForEntity(NSEntityDescriptio
     return @[ camelizedIDAttributeName, underscoredIDAttributeName ];
 }
 
-static NSArray *RKEntityIdentificationAttributeNames()
+static NSArray *RKEntityIdentificationAttributeNames(void)
 {
     return @[@"identifier", @"id", @"ID", @"URL", @"url"];
 }

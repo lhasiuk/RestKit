@@ -54,7 +54,7 @@ NSError *RKErrorFromMappingResult(RKMappingResult *mappingResult)
     return error;
 }
 
-static NSIndexSet *RKErrorStatusCodes()
+static NSIndexSet *RKErrorStatusCodes(void)
 {
     static NSIndexSet *errorStatusCodes = nil;
     static dispatch_once_t onceToken;
@@ -111,7 +111,7 @@ static NSString *RKFailureReasonErrorStringForResponseDescriptorsMismatchWithRes
 /**
  A serial dispatch queue used for all deserialization of response bodies
  */
-static dispatch_queue_t RKResponseMapperSerializationQueue() {
+static dispatch_queue_t RKResponseMapperSerializationQueue(void) {
     static dispatch_queue_t serializationQueue;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

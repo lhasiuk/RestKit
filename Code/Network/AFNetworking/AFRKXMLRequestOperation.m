@@ -24,7 +24,7 @@
 
 #include <Availability.h>
 
-static dispatch_queue_t xml_request_operation_processing_queue() {
+static dispatch_queue_t xml_request_operation_processing_queue(void) {
     static dispatch_queue_t afrk_xml_request_operation_processing_queue;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
